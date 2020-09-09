@@ -48,17 +48,9 @@
                         <tr>
                             <th class="tc" width="5%"><input class="allChoose" name="" type="checkbox"></th>
                             <th>排序</th>
-                            <th>Uid</th>
-                            <th>用户名</th>
-                            <th>用户密码</th>
-                            <th>性别</th>
-                            <th>出生日期</th>
-                            <th>描述</th>
-                            <th>邮箱</th>
-                            <th>手机号</th>
-                            
-                              <th>地址</th>
-                              <th>身份</th>
+                            <th>分类id</th>
+                            <th>分类名称</th>
+                            <th>上级分类名称</th>                     
                             <th>操作</th>
                         </tr>
                        <c:forEach items="${li}" var="zz">
@@ -70,17 +62,10 @@
                                 <input class="common-input sort-input" name="ord[]" value="0" type="text">
                             </td>
                            
-                            <td>${zz.getUid()}</td>
-                            <td >${zz.getUname()}</a>
-                            </td>
-                            <td>${zz.getUpass()}</td>
-                            <td>${zz.getUsex()}</td>
-                            <td>${zz.getUbirth()}</td>
-                            <td>${zz.getUdesc()}</td>
-                            <td>${zz.getUemail()}</td>
-                            <td>${zz.getUphone()}</td>
-                            <td>${zz.getUadd()}</td>
-                            <td>${zz.getUstatus()}</td>
+                            <td>${zz.getCId()}</td>
+                            <td >${zz.getCname()}</a></td>
+                            <td>${zz.getParentid()}</td>
+                          
                             <td>
                                 <a class="link-update" href="#">修改</a>
                                 <a class="link-del" href="#">删除</a>
@@ -91,10 +76,10 @@
                    
                     <div class="list-page">
                    	共${tsum}条记录,当前1/${totalpages}页
-                   	<a href="/manager/UserShow?cp=1">首页</a>
-                     <a href="/manager/UserShow?cp=${cp-1<1?1:cp-1}">上一页</a>
-                     <a href="/manager/UserShow?cp=${cp+1>totalpages?cp:cp+1}">下一页</a>
-                     <a href="/manager/UserShow?cp=${totalpages}">尾页</a>
+                   	<a href="/manager/CategoryShow?cp=1">首页</a>
+                     <a href="/manager/CategoryShow?cp=${cp-1<1?1:cp-1}">上一页</a>
+                     <a href="/manager/CategoryShow?cp=${cp+1>totalpages?cp:cp+1}">下一页</a>
+                     <a href="/manager/CategoryShow?cp=${totalpages}">尾页</a>
                      </div>
                 </div>
             </form>
