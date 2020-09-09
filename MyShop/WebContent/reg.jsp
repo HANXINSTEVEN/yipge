@@ -1,4 +1,4 @@
-<%@ page language="java" contentType="text/html; charset=utf-8"
+<%@ page language="java" contentType="text/jsp; charset=utf-8"
     pageEncoding="utf-8"%>
 <!DOCTYPE html>
 <html>
@@ -10,7 +10,7 @@
 </head>
 <body><!-------------------reg-------------------------->
 <div class="reg">
-    <form action="#" method="post"><h1><a href="index.html"><img src="img/temp/logo.png"></a></h1>
+    <form action="#" method="post"><h1><a href="index.jsp"><img src="img/temp/logo.png"></a></h1>
         <p>用户注册</p>
         <p><input type="text" name="" value="" placeholder="请输入邮箱"></p>
         <p><input type="text" name="" value="" placeholder="请输入密码"></p>

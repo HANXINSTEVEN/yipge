@@ -11,41 +11,41 @@
 <body><!----------------------------------------order------------------>
 <div class="head ding">
     <div class="wrapper clearfix">
-        <div class="clearfix" id="top"><h1 class="fl"><a href="index.html"><img src="img/logo.png"/></a></h1>
+        <div class="clearfix" id="top"><h1 class="fl"><a href="index.jsp"><img src="img/logo.png"/></a></h1>
             <div class="fr clearfix" id="top1"><p class="fl"><a href="#" id="login">登录</a><a href="#" id="reg">注册</a>
             </p>
                 <form action="#" method="get" class="fl"><input type="text" placeholder="搜索"/><input type="button"/>
                 </form>
-                <div class="btn fl clearfix"><a href="mygxin.html"><img src="img/grzx.png"/></a><a href="#" class="er1"><img
-                        src="img/ewm.png"/></a><a href="cart.html"><img src="img/gwc.png"/></a>
+                <div class="btn fl clearfix"><a href="mygxin.jsp"><img src="img/grzx.png"/></a><a href="#" class="er1"><img
+                        src="img/ewm.png"/></a><a href="cart.jsp"><img src="img/gwc.png"/></a>
                     <p><a href="#"><img src="img/smewm.png"/></a></p></div>
             </div>
         </div>
         <ul class="clearfix" id="bott">
-            <li><a href="index.html">首页</a></li>
+            <li><a href="index.jsp">首页</a></li>
             <li><a href="#">所有商品</a>
                 <div class="sList">
-                    <div class="wrapper  clearfix"><a href="paint.html">
+                    <div class="wrapper  clearfix"><a href="paint.jsp">
                         <dl>
                             <dt><img src="img/nav1.jpg"/></dt>
                             <dd>浓情欧式</dd>
                         </dl>
-                    </a><a href="paint.html">
+                    </a><a href="paint.jsp">
                         <dl>
                             <dt><img src="img/nav2.jpg"/></dt>
                             <dd>浪漫美式</dd>
                         </dl>
-                    </a><a href="paint.html">
+                    </a><a href="paint.jsp">
                         <dl>
                             <dt><img src="img/nav3.jpg"/></dt>
                             <dd>雅致中式</dd>
                         </dl>
-                    </a><a href="paint.html">
+                    </a><a href="paint.jsp">
                         <dl>
                             <dt><img src="img/nav6.jpg"/></dt>
                             <dd>简约现代</dd>
                         </dl>
-                    </a><a href="paint.html">
+                    </a><a href="paint.jsp">
                         <dl>
                             <dt><img src="img/nav7.jpg"/></dt>
                             <dd>创意装饰</dd>
@@ -53,19 +53,19 @@
                     </a></div>
                 </div>
             </li>
-            <li><a href="flowerDer.html">装饰摆件</a>
+            <li><a href="flowerDer.jsp">装饰摆件</a>
                 <div class="sList2">
-                    <div class="clearfix"><a href="proList.html">干花花艺</a><a href="vase_proList.html">花瓶花器</a></div>
+                    <div class="clearfix"><a href="proList.jsp">干花花艺</a><a href="vase_proList.jsp">花瓶花器</a></div>
                 </div>
             </li>
-            <li><a href="decoration.html">布艺软饰</a>
+            <li><a href="decoration.jsp">布艺软饰</a>
                 <div class="sList2">
-                    <div class="clearfix"><a href="zbproList.html">桌布罩件</a><a href="bzproList.html">抱枕靠垫</a></div>
+                    <div class="clearfix"><a href="zbproList.jsp">桌布罩件</a><a href="bzproList.jsp">抱枕靠垫</a></div>
                 </div>
             </li>
-            <li><a href="paint.html">墙式壁挂</a></li>
-            <li><a href="perfume.html">蜡艺香薰</a></li>
-            <li><a href="idea.html">创意家居</a></li>
+            <li><a href="paint.jsp">墙式壁挂</a></li>
+            <li><a href="perfume.jsp">蜡艺香薰</a></li>
+            <li><a href="idea.jsp">创意家居</a></li>
         </ul>
     </div>
 </div>
@@ -73,69 +73,69 @@
     <div class="site"><p class="wrapper clearfix"><span class="fl">支付成功</span><img class="top"
                                                                                    src="img/temp/cartTop03.png"></p>
     </div>
-    <p class="ok">支付成功！剩余<span>5</span>秒<a href="myorderq.html">返回订单页</a></p></div>
+    <p class="ok">支付成功！剩余<span>5</span>秒<a href="myorderq.jsp">返回订单页</a></p></div>
 <div class="like"><h4>猜你喜欢</h4>
     <div class="bottom">
         <div class="hd"><span class="prev"><img src="img/temp/prev.png"></span><span class="next"><img
                 src="img/temp/next.png"></span></div>
         <div class="imgCon wrapper bd">
             <div class="likeList clearfix">
-                <div><a href="proDetail.html">
+                <div><a href="proDetail.jsp">
                     <dl>
                         <dt><img src="img/temp/like01.jpg"></dt>
                         <dd>【最家】复古文艺风玻璃花瓶</dd>
                         <dd>￥193.20</dd>
                     </dl>
-                </a><a href="proDetail.html">
+                </a><a href="proDetail.jsp">
                     <dl>
                         <dt><img src="img/temp/like02.jpg"></dt>
                         <dd>【最家】复古文艺风玻璃花瓶</dd>
                         <dd>￥193.20</dd>
                     </dl>
-                </a><a href="proDetail.html">
+                </a><a href="proDetail.jsp">
                     <dl>
                         <dt><img src="img/temp/like03.jpg"></dt>
                         <dd>【最家】复古文艺风玻璃花瓶</dd>
                         <dd>￥193.20</dd>
                     </dl>
-                </a><a href="proDetail.html">
+                </a><a href="proDetail.jsp">
                     <dl>
                         <dt><img src="img/temp/like04.jpg"></dt>
                         <dd>【最家】复古文艺风玻璃花瓶</dd>
                         <dd>￥193.20</dd>
                     </dl>
-                </a><a href="proDetail.html" class="last">
+                </a><a href="proDetail.jsp" class="last">
                     <dl>
                         <dt><img src="img/temp/like05.jpg"></dt>
                         <dd>【最家】复古文艺风玻璃花瓶</dd>
                         <dd>￥193.20</dd>
                     </dl>
                 </a></div>
-                <div><a href="proDetail.html">
+                <div><a href="proDetail.jsp">
                     <dl>
                         <dt><img src="img/temp/like01.jpg"></dt>
                         <dd>【最家】复古文艺风玻璃花瓶</dd>
                         <dd>￥193.20</dd>
                     </dl>
-                </a><a href="proDetail.html">
+                </a><a href="proDetail.jsp">
                     <dl>
                         <dt><img src="img/temp/like02.jpg"></dt>
                         <dd>【最家】复古文艺风玻璃花瓶</dd>
                         <dd>￥193.20</dd>
                     </dl>
-                </a><a href="proDetail.html">
+                </a><a href="proDetail.jsp">
                     <dl>
                         <dt><img src="img/temp/like03.jpg"></dt>
                         <dd>【最家】复古文艺风玻璃花瓶</dd>
                         <dd>￥193.20</dd>
                     </dl>
-                </a><a href="proDetail.html">
+                </a><a href="proDetail.jsp">
                     <dl>
                         <dt><img src="img/temp/like04.jpg"></dt>
                         <dd>【最家】复古文艺风玻璃花瓶</dd>
                         <dd>￥193.20</dd>
                     </dl>
-                </a><a href="proDetail.html" class="last">
+                </a><a href="proDetail.jsp" class="last">
                     <dl>
                         <dt><img src="img/temp/like05.jpg"></dt>
                         <dd>【最家】复古文艺风玻璃花瓶</dd>
