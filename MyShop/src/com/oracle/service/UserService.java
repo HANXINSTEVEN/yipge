@@ -6,7 +6,7 @@ import java.util.List;
 import com.oracle.dao.Userdao;
 import com.oracle.entity.Shop_User;
 
-public class UserService implements com.oracle.interf.UserService{
+public class UserService implements com.oracle.interf.service.UserService{
 	Userdao us =new Userdao();
 	@Override
 	public int userAdd(Shop_User sh) throws SQLException {
@@ -31,6 +31,17 @@ public class UserService implements com.oracle.interf.UserService{
 	}
 	@Override
 	public void register(Shop_User us) {
+		// TODO Auto-generated method stub
+		
+	}
+	@Override
+	public void userDel(int uid) throws SQLException {
+		us.userDel(uid);
+		
+	}
+	@Override
+	public Shop_User ShowOne(int uid) throws SQLException {
+		return us.ShowOne(uid);
 		// TODO Auto-generated method stub
 		
 	}

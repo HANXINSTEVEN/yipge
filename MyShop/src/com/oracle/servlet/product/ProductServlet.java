@@ -1,4 +1,4 @@
-package com.oracle.servlet.cart;
+package com.oracle.servlet.product;
 
 import java.io.IOException;
 import java.sql.SQLException;
@@ -10,23 +10,22 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import com.oracle.dao.Userdao;
-import com.oracle.entity.Shop_User;
-import com.oracle.entity.shop_cart;
-import com.oracle.service.CartService;
-import com.oracle.service.UserService;
+import com.oracle.entity.shop_category;
+import com.oracle.entity.shop_product;
+import com.oracle.service.CategoryService;
+import com.oracle.service.ProductService;
 
 /**
- * Servlet implementation class CartShow
+ * Servlet implementation class Product
  */
-@WebServlet("/manager/CartShow")
-public class CartShow extends HttpServlet {
+@WebServlet("/manager/Product")
+public class ProductServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public CartShow() {
+    public ProductServlet() {
         super();
         // TODO Auto-generated constructor stub
     }
@@ -37,15 +36,15 @@ public class CartShow extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		request.setCharacterEncoding("utf-8");
 		response.setContentType("text/html;utf-8");
-		CartService ca =new CartService();
-		List<shop_cart> li =null;
+		ProductService prod = new ProductService();
+		List<shop_product> li =null;
 		//当前页 
 		int cpage=1; //当前页
 		int count = 5; //每页显示条数
 		//获得指定页面
 		String cp =request.getParameter("cp");
 		try {
-			int arr[] =ca.totalPage();
+			int arr[] =prod.totalPage();
 			
 			request.setAttribute("tsum",arr[0]);//总tiao数
 			request.setAttribute("totalpages",arr[1]);//总页数
@@ -58,18 +57,15 @@ public class CartShow extends HttpServlet {
 			cpage=Integer.parseInt(cp);
 		}
 		try {
-			li = ca.cartAll(cpage,count);
+			li = prod.showAll(cpage,count);
+			System.out.println(li.get(0));
 			request.setAttribute("cp",cpage);
-			request.setAttribute("cartli", li);
-			request.getRequestDispatcher("/manager/cart_list.jsp").forward(request,response);
-			System.out.println();
+			request.setAttribute("Prod", li);
+			request.getRequestDispatcher("/manager/product_list.jsp").forward(request,response);
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		
-
-		
 	}
 
 	/**

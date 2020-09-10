@@ -5,19 +5,17 @@ import java.util.List;
 
 
 import org.apache.commons.dbutils.QueryRunner;
+import org.apache.commons.dbutils.handlers.BeanHandler;
 import org.apache.commons.dbutils.handlers.BeanListHandler;
 import org.apache.commons.dbutils.handlers.ScalarHandler;
 
 import com.oracle.entity.Shop_User;
-
+import com.oracle.interf.dao.UserDao;
 
 import cn.lds.C3P0.C3P0Utils;
 
-
-
-public class Userdao {
-	
-
+public class Userdao implements UserDao{
+	@Override
 	public int userAdd(Shop_User sh) throws SQLException {
 	
 		String sql ="insert into shop_user values(?,?,?,?,DATE_FORMAT(?,'%Y-%m-%d'),?,?,?,?,?)";
@@ -25,6 +23,7 @@ public class Userdao {
 		return 	runner.update(sql,null,sh.getUname(),sh.getUpass(),sh.getUsex(),sh.getUbirth(),sh.getUdesc(),sh.getUemail(),sh.getUphone(),sh.getUadd(),sh.getUstatus());
 
 	}
+	
 	public static int[]totalPage() throws SQLException{
 		int arr[]= {0,1};
 		
@@ -54,5 +53,22 @@ public class Userdao {
 	
 		return runner.query( sql,new BeanListHandler<Shop_User> (Shop_User.class),cp,count);
 	}
-
+	public void userDel(int uid) throws SQLException {
+		String sql ="delete from shop_user where uid=? ";
+		//创建连接池对象
+		QueryRunner runner =new QueryRunner(C3P0Utils.getDataSource());
+		runner.update(sql, uid);
+		
+		
+	}
+	
+	public Shop_User ShowOne(int uid) throws SQLException {
+		// TODO Auto-generated method stub
+		String sql ="select * from shop_user where uid=?";
+		//创建连接池对象
+		QueryRunner runner =new QueryRunner(C3P0Utils.getDataSource());
+		
+		return runner.query(sql,new BeanHandler<Shop_User>(Shop_User.class),uid);
+	}
+	
 }

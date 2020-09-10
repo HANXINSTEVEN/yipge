@@ -1,5 +1,8 @@
 <%@ page language="java" contentType="text/html; charset=utf-8"
     pageEncoding="utf-8"%>
+<%@page import="java.util.*" %>
+<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@page import="com.oracle.entity.*" %>
 <!DOCTYPE html>
 <html>
 
@@ -11,29 +14,37 @@
     <div class="main-wrap">
 
         <div class="crumb-wrap">
-            <div class="crumb-list"><i class="icon-font"></i><a href="/jscss/admin/design/">首页</a><span class="crumb-step">&gt;</span><a class="crumb-name" href="admin_user.jsp">用户管理</a><span class="crumb-step">&gt;</span><span>新增用户</span></div>
+            <div class="crumb-list"><i class="icon-font"></i><a href="/jscss/admin/design/">首页</a><span class="crumb-step">&gt;</span><a class="crumb-name" href="admin_user.jsp">用户管理</a><span class="crumb-step">&gt;</span><span>更新用户信息</span></div>
         </div>
         <div class="result-wrap">
             <div class="result-content">
-                <form action="/manager/UserAdd" method="post" id="myform" name="myform" >
+                <form action="/manager/UserUpdate" method="post" id="myform" name="myform" >
                     <table class="insert-tab" width="100%">
                         <tbody>
+                        <tr>
+                               
+                                <td>
+                                    <input class="common-text required" id="title" name="uid" size="50" value="${zz.getUid()}" type="text">
+                                </td>
+                            </tr>
                             <tr>
                                 <th><i class="require-red">*</i>用户名</th>
                                 <td>
-                                    <input class="common-text required" id="title" name="uname" size="50" value="" type="text">
+                                    <input class="common-text required" id="title" name="uname" size="50" value="${zz.getUname()}" type="text">
                                 </td>
                             </tr>
                             <tr>
                                 <th><i class="require-red">*</i>密码：</th>
                                 <td>
-                                    <input class="common-text required" id="title" name="upass" size="50" value="" type="text">
+                                    <input class="common-text required" id="title" name="upass" size="50" value="${zz.getUpass()}" type="text">
                                 </td>
                             </tr>
                             <tr>
                                 <th><i class="require-red">*</i>性别：</th>
                                 <td>
-                                    <input class="common-text required" id="title" name="usex" size="50" value="男" type="radio">
+                                	<c:if test="${user.getUsex()!="男"}">
+                                	   <input class="common-text required" id="title" name="usex" size="50" value="男" type="radio">
+                                	</c:if>
                                     <input class="common-text required" id="title" name="usex" size="50" value="女" type="radio">
                                 </td>
                             </tr>

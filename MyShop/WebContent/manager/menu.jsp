@@ -11,10 +11,10 @@
 <div class="topbar-wrap white">
     <div class="topbar-inner clearfix">
         <div class="topbar-logo-wrap clearfix">
-            <h1 class="topbar-logo none"><a href="index.html" class="navbar-brand">后台管理</a></h1>
+            <h1 class="topbar-logo none"><a href="index.jsp" class="navbar-brand">后台管理</a></h1>
             <ul class="navbar-list clearfix">
-                <li><a class="on" href="index.html">首页</a></li>
-                <li><a href="#" target="_blank">网站首页</a></li>
+                <li><a class="on" href="#">首页</a></li>
+                <li><a href="/index.jsp" target="">网站首页</a></li>
             </ul>
         </div>
         <div class="top-info-wrap">
@@ -35,12 +35,10 @@
                 <li>
                     <a href="#"><i class="icon-font">&#xe003;</i>常用操作</a>
                     <ul class="sub-menu">
-                        <li><a href="admin_user.jsp"><i class="icon-font">&#xe005;</i>用户管理</a></li>
-                        <li><a href="admin_cate.jsp"><i class="icon-font">&#xe006;</i>分类管理</a></li>
-                        <li><a href="admin_product.jsp"><i class="icon-font">&#xe006;</i>图书管理</a></li>
-                        <li><a href="admin_order.jsp"><i class="icon-font">&#xe006;</i>订单管理</a></li>
-                        <li><a href="admin_message.jsp"><i class="icon-font">&#xe006;</i>留言管理</a></li>
-                        <li><a href="admin_add.jsp"><i class="icon-font">&#xe006;</i>新闻管理</a></li>
+                        <li><a href="/manager/UserShow"><i class="icon-font">&#xe005;</i>用户管理</a></li>
+                        <li><a href="/manager/Product"><i class="icon-font">&#xe006;</i>商品管理</a></li>
+                        <li><a href="/manager/CartShow"><i class="icon-font">&#xe006;</i>购物车管理</a></li>
+                        <li><a href="/manager/CategoryShow"><i class="icon-font">&#xe006;</i>分类管理</a></li>
                       
                       
                     </ul>

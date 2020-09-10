@@ -1,11 +1,11 @@
-package com.oracle.interf;
+package com.oracle.interf.service;
 
 import java.sql.SQLException;
 import java.util.List;
 
 import com.oracle.entity.shop_category;
 
-public interface CategoryDao {
+public interface CategoryService {
 	/**
 	 * 显示全部分类
 	 * @param cpage 当前页
@@ -13,7 +13,6 @@ public interface CategoryDao {
 	 * @return
 	 * @throws SQLException
 	 */
-	
 	public List<shop_category>CategoryAll(int cpage, int count) throws SQLException;
 	/**
 	 * 添加分类

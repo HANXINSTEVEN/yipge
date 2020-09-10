@@ -1,4 +1,4 @@
-package com.oracle.interf;
+package com.oracle.interf.service;
 
 import java.sql.SQLException;
 import java.util.List;
@@ -24,17 +24,23 @@ public int userAdd(Shop_User sh) throws SQLException;
 public List<Shop_User> Userall(int cpage, int count) throws SQLException;
 
 /**
- * µÇÈë
+ * µÇlu
  * @param us 
  * @return
  * @throws SQLException
  */
 public Shop_User login(Shop_User us) throws SQLException;	
 /**
- * 
+ * ×¢²á
  * @param us
  */
 public void register(Shop_User us);
+
+
+void userDel(int uid) throws SQLException;
+
+
+Shop_User ShowOne(int uid) throws SQLException;
 	
 
 

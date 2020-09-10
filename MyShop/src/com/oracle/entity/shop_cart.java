@@ -9,7 +9,6 @@ public class shop_cart {
 	private int cquantity;   //购买数量
 	private int cstock;	//商品库存
 	private int pid ; //商品id
-	
 	private int uid ; //用户id
 	private int cvalid; //订单是否有效 设置监听 存session
 	public int getCid() {

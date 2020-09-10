@@ -19,7 +19,7 @@
     <div class="main-wrap">
 
         <div class="crumb-wrap">
-            <div class="crumb-list"><i class="icon-font"></i><a href="index.html">首页</a><span class="crumb-step">&gt;</span><span class="crumb-name">客户信息管理</span></div>
+            <div class="crumb-list"><i class="icon-font"></i><a href="#">首页</a><span class="crumb-step">&gt;</span><span class="crumb-name">分类管理</span></div>
         </div>
         <div class="search-wrap">
             <div class="search-content">
@@ -53,7 +53,7 @@
                             <th>上级分类名称</th>                     
                             <th>操作</th>
                         </tr>
-                       <c:forEach items="${li}" var="zz">
+                       <c:forEach items="${Categoryli}" var="zz">
                         <tr>
                         
                             <td class="tc"><input name="id[]" value="58" type="checkbox"></td>
@@ -62,7 +62,7 @@
                                 <input class="common-input sort-input" name="ord[]" value="0" type="text">
                             </td>
                            
-                            <td>${zz.getCId()}</td>
+                            <td>${zz.getCid()}</td>
                             <td >${zz.getCname()}</a></td>
                             <td>${zz.getParentid()}</td>
                           

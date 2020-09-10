@@ -10,6 +10,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import com.oracle.dao.CartDao;
 import com.oracle.dao.Userdao;
 import com.oracle.entity.Shop_User;
 import com.oracle.entity.shop_category;
@@ -45,7 +46,7 @@ public class CategoryShow extends HttpServlet {
 		//获得指定页面
 		String cp =request.getParameter("cp");
 		try {
-			int arr[] =Userdao.totalPage();
+			int arr[] =cate.totalPage();
 			
 			request.setAttribute("tsum",arr[0]);//总tiao数
 			request.setAttribute("totalpages",arr[1]);//总页数

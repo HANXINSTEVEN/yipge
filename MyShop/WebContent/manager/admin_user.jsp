@@ -19,7 +19,7 @@
     <div class="main-wrap">
 
         <div class="crumb-wrap">
-            <div class="crumb-list"><i class="icon-font"></i><a href="index.html">首页</a><span class="crumb-step">&gt;</span><span class="crumb-name">客户信息管理</span></div>
+            <div class="crumb-list"><i class="icon-font"></i><a href="#">首页</a><span class="crumb-step">&gt;</span><span class="crumb-name">客户信息管理</span></div>
         </div>
         <div class="search-wrap">
             <div class="search-content">
@@ -82,8 +82,8 @@
                             <td>${zz.getUadd()}</td>
                             <td>${zz.getUstatus()}</td>
                             <td>
-                                <a class="link-update" href="#">修改</a>
-                                <a class="link-del" href="#">删除</a>
+                                <a class="link-update" href="/manager/UserShowOne?uid=${zz.getUid()}">修改</a>
+                                <a class="link-del" href="/manager/UserDel?uid=${zz.getUid()}">删除</a>
                             </td>
                         </tr>
                         </c:forEach>

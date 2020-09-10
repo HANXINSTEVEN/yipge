@@ -97,5 +97,7 @@ public class Shop_User {
 						+ ", uadd=" + uadd + ", ustatus=" + ustatus + "]";
 			}
 			
+		
+			
 
 }

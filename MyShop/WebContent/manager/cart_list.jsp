@@ -19,7 +19,7 @@
     <div class="main-wrap">
 
         <div class="crumb-wrap">
-            <div class="crumb-list"><i class="icon-font"></i><a href="index.html">首页</a><span class="crumb-step">&gt;</span><span class="crumb-name">客户信息管理</span></div>
+            <div class="crumb-list"><i class="icon-font"></i><a href="#">首页</a><span class="crumb-step">&gt;</span><span class="crumb-name">购物车管理</span></div>
         </div>
         <div class="search-wrap">
             <div class="search-content">
@@ -48,20 +48,18 @@
                         <tr>
                             <th class="tc" width="5%"><input class="allChoose" name="" type="checkbox"></th>
                             <th>排序</th>
-                            <th>Uid</th>
-                            <th>用户名</th>
-                            <th>用户密码</th>
-                            <th>性别</th>
-                            <th>出生日期</th>
-                            <th>描述</th>
-                            <th>邮箱</th>
-                            <th>手机号</th>
-                            
-                              <th>地址</th>
-                              <th>身份</th>
+                       
+                            <th>cimgname</th>
+                            <th>商品名称</th>
+                            <th>商品价格</th>
+                            <th>购买数量</th>
+                            <th>商品库存</th>
+                            <th>商品pid</th>
+                            <th>用户名uid</th>
+                              <th>订单有效性</th>
                             <th>操作</th>
                         </tr>
-                       <c:forEach items="${li}" var="zz">
+                       <c:forEach items="${cartli}" var="zz">
                         <tr>
                         
                             <td class="tc"><input name="id[]" value="58" type="checkbox"></td>
@@ -70,17 +68,16 @@
                                 <input class="common-input sort-input" name="ord[]" value="0" type="text">
                             </td>
                            
-                            <td>${zz.getUid()}</td>
-                            <td >${zz.getUname()}</a>
+                            <td>${zz.getCimgname()}</td>
+                            <td >${zz.getPname()}</a>
                             </td>
-                            <td>${zz.getUpass()}</td>
-                            <td>${zz.getUsex()}</td>
-                            <td>${zz.getUbirth()}</td>
-                            <td>${zz.getUdesc()}</td>
-                            <td>${zz.getUemail()}</td>
-                            <td>${zz.getUphone()}</td>
-                            <td>${zz.getUadd()}</td>
-                            <td>${zz.getUstatus()}</td>
+                            <td>${zz.getPrice()}</td>
+                            <td>${zz.getCquantity()}</td>
+                            <td>${zz.getCstock()}</td>
+                            <td>${zz.getPid()}</td>
+                            <td>${zz.getUid()}</td>
+                            <td>${zz.getCvalid()}</td>
+                        
                             <td>
                                 <a class="link-update" href="#">修改</a>
                                 <a class="link-del" href="#">删除</a>
@@ -91,10 +88,10 @@
                    
                     <div class="list-page">
                    	共${tsum}条记录,当前1/${totalpages}页
-                   	<a href="/manager/UserShow?cp=1">首页</a>
-                     <a href="/manager/UserShow?cp=${cp-1<1?1:cp-1}">上一页</a>
-                     <a href="/manager/UserShow?cp=${cp+1>totalpages?cp:cp+1}">下一页</a>
-                     <a href="/manager/UserShow?cp=${totalpages}">尾页</a>
+                   	<a href="/manager/CartShow?cp=1">首页</a>
+                     <a href="/manager/CartShow?cp=${cp-1<1?1:cp-1}">上一页</a>
+                     <a href="/manager/CartShow?cp=${cp+1>totalpages?cp:cp+1}">下一页</a>
+                     <a href="/manager/CartShow?cp=${totalpages}">尾页</a>
                      </div>
                 </div>
             </form>
